@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Tournamenter</title>
+  <link rel="stylesheet" href="players.component.css">
+ 
+</head>
+
+<div class="bracket-container">
+    <body>
+      
+      <table>
+        <thead>
+          <tr>
+            <th class="my-class">Player Name</th>
+            
+            <th class="my-class">Actions</th>
+            <a class="card" target="_blank" rel="noopener">
+              <svg width="10" height="24" viewBox="0 0 24 24"></svg>
+              <button class="btn" (click)="createPlayer()">Create</button>
+            </a>
+          </tr>
+          
+    
+        </thead>
+    
+        
+        <tbody>
+          <tr *ngFor="let players of players">
+            <td>{{ players.name }}</td>
+                      
+              <div class="card-container">
+                  
+              
+                <a class="card" target="_blank" rel="noopener">  
+                  <svg width="10" height="24" viewBox="0 0 24 24"></svg>  
+                  <button class="btn" (click)="deletePlayer(players)">Delete</button>
+
+                 </a>
+              </div>
+
+
+            
+          </tr>
+        
+        </tbody>
+        
+      </table>
+    
+    
+    
+    </body>
+    
+    </div>
+
+</html>

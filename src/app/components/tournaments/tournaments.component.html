@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Tournamenter</title>
+  <link rel="stylesheet" href="tournaments.component.css">
+ 
+</head>
+
+
+    <body>
+      
+      <table>
+        <thead>
+          <tr>
+            <th class="my-class">Team Name</th>
+            <th class="my-class">Date</th>
+            <th class="my-class">Location</th>
+            <th class="my-class">Actions</th>
+            <a class="card" target="_blank" rel="noopener">
+              <svg width="10" height="24" viewBox="0 0 24 24"></svg>
+              <button class="btn" (click)="createTeam()">Create</button>
+            </a>
+          </tr>
+          
+        </thead>
+
+        <thead>
+            <tr>
+                <a class="card" target="_blank" rel="noopener">
+                <svg width="10" height="24" viewBox="0 0 24 24"></svg>
+                <button class="btn" (click)="insertPlayer()">Insert Players</button>
+              </a>
+            </tr>
+            
+      
+          </thead>
+
+    
+        
+        <tbody>
+          <tr *ngFor="let team of teams">
+            <td>{{ team.name }}</td>
+            <td>{{ team.date }}</td>
+            <td>{{ team.location }}</td>
+            <td>
+              <div class="card-container">
+                  
+                <a class="card" target="_blank" rel="noopener">
+                  <svg width="10" height="24" viewBox="0 0 24 24"></svg>
+                  <button class="btn" (click)="editTeam(team)">Edit</button>
+                </a>
+                <a class="card" target="_blank" rel="noopener">  
+                  <svg width="10" height="24" viewBox="0 0 24 24"></svg>  
+                  <button class="btn" (click)="deleteTeam(team)">Delete</button>
+
+                 </a>
+              </div>
+            </td>
+          </tr>
+        
+        </tbody>
+        
+      </table>
+    
+    
+    
+    </body>
+    
+    
+
+</html>
